@@ -2,18 +2,17 @@ class Draw extends React.Component {
   state = {
     options: ["1", "2", "3"],
     option: null,
-
   }
-
 
   handleShowOption = () => {
     const index = Math.floor(Math.random() * this.state.options.length)
+
     this.setState({
       option: this.state.options[index]
     })
   }
-  render() {
 
+  render() {
     return (
       <div>
         <button onClick={this.handleShowOption}>Zobacz wróżbę</button>
@@ -23,4 +22,4 @@ class Draw extends React.Component {
   }
 }
 
-ReactDOM.render(<Draw />, document.getElementById('root'))
+ReactDOM.render(<Draw />, document.getElementById('root'));
